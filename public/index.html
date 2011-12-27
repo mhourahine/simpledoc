@@ -1,0 +1,48 @@
+<html>
+<head>
+	<title>Simple Doc Editor</title>
+	
+	<!-- Javascript Files -->
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+	<script type="text/javascript" src="js/app.js"></script>
+	
+	<style type="text/css" media="screen">
+		@import url('css/style.css');
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div id="doclist" class="col_fixed">
+			<ul id="doclist-items">
+			</ul>
+			<a class="doc-action link">Add New</a>
+		</div>
+	
+		<div id="doc_container" class="col_variable">
+			<div id="docnav">
+				<ul>
+					<li class="doc-action link">View</li>
+					<li class="doc-action link">Edit</li>
+				</ul>
+			</div>
+
+			<div id="docview">
+				Choose a document from the list to view
+			</div>
+	
+			<div id="docedit" style="display: none;">
+				<form id="docedit-form">
+					<input type="hidden" name="_id" id="_id" value="" />
+					<input type="hidden" name="_rev" id="_rev" value="">
+					<input type="text" name="title" id="title" value="" />
+					<textarea name="body" id="body">
+					</textarea>
+					<input type="button" name="docedit-form-save" id="docedit-form-save" value="Save" />
+				</form>
+			</div>
+		</div>
+	</div>
+	<pre id="debug">
+	</pre>
+</body>
+</html>
